@@ -2,10 +2,10 @@
 
     // Form the DB Connection string
     $port = '3306';
-    $dbname = 'uncobacs_subscribers';
+    $dbname = 'tyzwprmy_subscribers';
     $db_connect = "mysql:host=localhost:$port;dbname=$dbname";
-    $username = 'uncobacs_350';
-    $password = 'BACS_350';
+    $username = 'tyzwprmy_350';
+    $password = 'password123';
 
     echo "<h1>DB Connection</h1>" .
         "<p>Connect String:  $db_connect, $username, $password</p>";
