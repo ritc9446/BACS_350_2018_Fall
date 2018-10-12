@@ -10,10 +10,11 @@
             <div class="card">
                 <h3>Add Subscriber</h3>
             
-                <form action="insert.php" method="get">
+                <form action="index.php" method="post">
                     <p><label>Name:</label> &nbsp; <input type="text" name="name"></p>
                     <p><label>Email:</label> &nbsp; <input type="text" name="email"></p>
                     <p><input type="submit" value="Sign Up"/></p>
+                    <input type="hidden" name="action" value="add">
                 </form>
             </div>
             ';
@@ -21,16 +22,7 @@
     }
 
 
-    /*
-        render_simple_page -- Create the HTML page.
-    */
-
-    function render_simple_page($title, $text) {
-        
-        echo "<h1>$title</h1><p>$text</p>";
-    }
-
-
+    
     /*
         render_list -- Loop over all of the subscribers to make a bullet list
     */
