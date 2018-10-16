@@ -50,12 +50,12 @@
     // Open the database or die
     function subscribers_connect() {
         
-        $remote = ($_SERVER['SERVER_NAME'] == 'unco-bacs.org');
+        $remote = ($_SERVER['SERVER_NAME'] == 'localhost');
         if ($remote) {
-            return remote_connect();
+            return local_connect();
         } 
         else {
-            return local_connect();
+            return remote_connect();
         }
         
     }
