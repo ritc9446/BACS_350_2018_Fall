@@ -114,7 +114,7 @@
 
 
     // render_list -- Loop over all of the log to make a bullet list
-    function render_history($list) {
+    function render_list($list) {
 
         echo '
             <div class="card">
@@ -148,7 +148,7 @@
             
     ---------------------------------------------- */
     
-    require_once 'db.php';
+    require_once 'subscriber_db.php';
 
 
     // My log list
@@ -158,7 +158,7 @@
         private $db;
 
         function __construct() {
-            $this->db =  connect_database();
+            $this->db =  subscribers_connect();
         }
 
         
@@ -192,7 +192,7 @@
         
         // Views
         function show_log() {
-            render_history($this->query());
+            render_list($this->query());
         }
         
         function add_form() {

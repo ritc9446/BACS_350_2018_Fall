@@ -29,7 +29,7 @@
     function local_connect() {
 
         $host = 'localhost';
-        $dbname = 'subscribers';
+        $dbname = 'bacs350';
         $username = 'root';
         $password = '';
         $db_connect = "mysql:host=$host;dbname=$dbname";
@@ -57,7 +57,7 @@
 
 
     // Open the database or die
-    function subscribers_connect() {
+    function connect_database() {
         
         $local = ($_SERVER['SERVER_NAME'] == 'localhost');
         if ($local) {
@@ -68,5 +68,9 @@
         }
         
     }
+
+    // Create a connection
+
+    $db = connect_database();
 
 ?>
