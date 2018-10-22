@@ -1,6 +1,6 @@
 <?php
 
-require_once 'views.php';
+    require_once 'views.php';
 
 
     // Log the page load

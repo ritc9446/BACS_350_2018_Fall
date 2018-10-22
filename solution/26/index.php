@@ -64,15 +64,15 @@
     $db_connect = "mysql:host=$host;dbname=$dbname";
 
 //    // This attempt should succeed
-//    try {
-//        $db = new PDO($db_connect, $username, $password);
-//        $log->log_page("Database connect: $db_connect");
-//    } 
-//    catch (PDOException $e) {
-//        $error_message = $e->getMessage();
-//        $log->log_page("Database Error: $error_message, $password");
-//        echo "Error: $error_message, $password";
-//    }
+    try {
+        $db = new PDO($db_connect, $username, $password);
+        $log->log_page("Database connect: $db_connect");
+    }
+    catch (PDOException $e) {
+        $error_message = $e->getMessage();
+        $log->log_page("Database Error: $error_message, $password");
+        echo "Error: $error_message, $password";
+    }
 //
 //    // This attempt should fail
 //    try {
