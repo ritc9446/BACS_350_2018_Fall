@@ -4,16 +4,16 @@
         add_subscriber_form -- Create an HTML form to add record.
     */
 
-    function add_subscriber_form() {
+    function add_notes_form() {
         
         echo '
             <div class="card">
-                <h3>Add Subscriber</h3>
+                <h3>Add Note</h3>
             
                 <form action="insert.php" method="post">
-                    <p><label>Name:</label> &nbsp; <input type="text" name="name"></p>
-                    <p><label>Email:</label> &nbsp; <input type="text" name="email"></p>
-                    <p><input type="submit" value="Sign Up"/></p>
+                    <p><label>Title:</label> &nbsp; <input type="text" name="title"></p>
+                    <p><label>Body:</label> &nbsp; <input type="text" name="body"></p>
+                    <p><input type="submit" value="Add Note"/></p>
                 </form>
             </div>
             ';
@@ -21,16 +21,7 @@
     }
 
 
-    /*
-        render_simple_page -- Create the HTML page.
-    */
-
-    function render_simple_page($title, $text) {
-        
-        echo "<h1>$title</h1><p>$text</p>";
-    }
-
-
+    
     /*
         render_list -- Loop over all of the subscribers to make a bullet list
     */
@@ -39,11 +30,11 @@
 
         echo '
             <div class="card">
-                <h3>Subscribers in List</h3> 
+                <h3>Notes in List</h3> 
                 <ul>
             ';
         foreach ($list as $s) {
-            echo '<li>'. $s['name'] . ', ' . $s['email'] . '</li>';
+            echo '<li>' . $s['title'] . ', ' . $s['body'] . ', ' . $s['date'] . '</li>';
         }
         echo '
                 </ul>
