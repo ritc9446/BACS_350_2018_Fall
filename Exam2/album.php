@@ -59,6 +59,10 @@
             album_list_view($this->query());
         }
         
+        function show_cards() {
+            cards_list_view($this->query());
+        }
+        
         
         function add_form() {
             add_album_form();

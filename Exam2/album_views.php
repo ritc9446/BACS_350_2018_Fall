@@ -20,7 +20,6 @@
         
     }
 
-
     // album_list_view -- Loop over all of the albums to make a bullet list
     function album_list_view($list) {
 
@@ -38,5 +37,28 @@
             </div>';
     
     }
+
+
+
+function cards_list_view($list) {
+
+    echo '<h3>Albums in List</h3> ';
+        foreach ($list as $s) {
+            echo '
+        <div class="card">
+                    <div class="card-header">
+                        <h2>'. $s['name'] .'</h2>
+                    </div>
+                    
+                    <div class="card-body card-padding">
+                    <img src="'. $s['artwork'] .'" alt="'. $s['artwork'] .'">
+                    <ul>
+                        <li>' . $s['artist'] . ', <a href="http://www.' . $s['purchase_url']. '">' . $s['purchase_url']. '</a>, ' . $s['description'] . ', ' . $s['review'] . '</li>
+                    </ul>
+                    </div>
+        </div>'
+            ;}
+}
+
 
 ?>

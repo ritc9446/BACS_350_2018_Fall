@@ -9,7 +9,7 @@
 
 
     // Page Content
-   echo '<p><a href="card.php">Card View</a></p>';
+   echo '<p><a href="index.php">List View</a></p>';
     echo '<p><a href="pagelog.php">Page Log</a></p>';
     
     
@@ -28,15 +28,7 @@
 
 
     // Render a list of albums
-    $album->show_album();
-
-
-    // Show the add form
-    $album->add_form();
-
-
-    // Clear the list by sending "action" of "clear" to this view
-    echo '<p><a href="index.php?action=clear" class="btn">Clear Albums</a></p>';
+    $album->show_cards();
 
 
     end_page();
