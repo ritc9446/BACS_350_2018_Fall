@@ -48,13 +48,14 @@ function cards_list_view($list) {
         <div class="card">
                     <div class="card-header">
                         <h2>'. $s['name'] .'</h2>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'. $s['artist'] .'</p>
                     </div>
-                    
                     <div class="card-body card-padding">
-                    <img src="'. $s['artwork'] .'" alt="'. $s['artwork'] .'">
-                    <ul>
-                        <li>' . $s['artist'] . ', <a href="http://www.' . $s['purchase_url']. '">' . $s['purchase_url']. '</a>, ' . $s['description'] . ', ' . $s['review'] . '</li>
-                    </ul>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="'. $s['artwork'] .'" alt="'. $s['artwork'] .'" height="80"></p>
+                        <p><a href="' . $s['purchase_url']. '"> Buy Now (' . $s['purchase_url']. ')</a> </p>
+                        <p>Decription:</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+                        . $s['description'] . ' 
+                        <p>Review: </p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' . $s['review'] . '
                     </div>
         </div>'
             ;}

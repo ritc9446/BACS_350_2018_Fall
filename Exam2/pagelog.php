@@ -9,7 +9,7 @@
 
 
     // Page Content
-   echo '<p><a href="card.php">Card View</a></p>';
+ //  echo '<p><a href="card.php">Card View</a></p>';
     echo '<p><a href="index.php">Albums</a></p>';
       
 

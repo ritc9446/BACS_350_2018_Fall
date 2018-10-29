@@ -9,7 +9,7 @@
 
 
     // Page Content
-   echo '<p><a href="card.php">Card View</a></p>';
+   // echo '<p><a href="card.php">Card View</a></p>';
     echo '<p><a href="pagelog.php">Page Log</a></p>';
     
     
@@ -28,7 +28,8 @@
 
 
     // Render a list of albums
-    $album->show_album();
+   // $album->show_album();
+    $album->show_cards();
 
 
     // Show the add form
